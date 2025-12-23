@@ -58,9 +58,9 @@ jobs:
       # Optional integration test
       - name: Start services for tests
         run: |
-          docker compose -f Docker-compose.yml up -d
+          docker compose -f cicd_setup-main/Docker-compose.yml up -d
           sleep 15
 
       - name: Stop services
         if: always()
-        run: docker compose -f Docker-compose.yml down
+        run: docker compose -f cicd_setup-main/Docker-compose.yml down
