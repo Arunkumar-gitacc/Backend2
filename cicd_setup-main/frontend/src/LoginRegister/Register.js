@@ -85,7 +85,7 @@ const Register = ({ onSelectChange },props) => {
         return true; // Email is unique
       }
     } catch (error) {
-      console.error('Error checking email uniqueness:', error.response || error.message);
+      console.error('Error checking email uniqueness1:', error.response || error.message);
       setEmailCheckStatus('Error checking email uniqueness. Please try again.');
       return false; // Treat as duplicate in case of error
     }
